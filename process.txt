@@ -24,4 +24,16 @@ if __name__ == '__main__':
 heroku website > create new app 
 CLI > heroku login -i > heroku apps
 push to GI > add remote with: heroku git:remote -a task-manager-dlymer         this came from heroku page
+pip3 freeze --local > requirements.txt
+git add, commit, push
+echo web: python app.py > Procfile
+git add, commit, push
 git push heroku master
+heroku ps:scale web=1
+back to heroku website > settings > reveal config vars > IP 0.0.0.0 PORT 5000 > Open app button at top of page should deploy app in browser
+
+pip3 install flask-pymongo
+pip3 install dnspython
+edited app.py file to connect to these
+
+back to mongodb atlas webpage > overview > connect > connect your application >copy link > patse link into app.py replacing password and database name >
