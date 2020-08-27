@@ -1,0 +1,6 @@
+atlas website > collections > create database button > name task_manager > collection categories > click create button
+create another collection in same database > tasks
+categories > insert document > key value pair
+tasks > insert document > key value pairs, first same as categories
+
+pip3 install flask
