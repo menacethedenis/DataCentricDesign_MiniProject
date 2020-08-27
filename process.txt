@@ -4,3 +4,24 @@ categories > insert document > key value pair
 tasks > insert document > key value pairs, first same as categories
 
 pip3 install flask
+setup app.py file with intial code
+import os
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def hello():
+    return 'Hello World ...again'
+
+
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'),
+            port=int(os.environ.get('PORT')),
+            debug=True)
+
+heroku website > create new app 
+CLI > heroku login -i > heroku apps
+push to GI > add remote with: heroku git:remote -a task-manager-dlymer         this came from heroku page
+git push heroku master
